@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="cajas_colores">
+        <div
+          class="azul"
+          style="background-color: blue; height: 200px; width: 200px"
+        >
+          <p>Haz Click para ver la magia</p>
+        </div>
+
+        <div
+          class="rojo"
+          style="background-color: red; height: 200px; width: 200px"
+        >
+          <p>Haz Click para ver la magia</p>
+        </div>
+
+        <div
+          class="verde"
+          style="background-color: green; height: 200px; width: 200px"
+        >
+          <p>Haz Click para ver la magia</p>
+        </div>
+
+        <div
+          class="amarillo"
+          style="background-color: yellow; height: 200px; width: 200px"
+        >
+          <p>Haz Click para ver la magia</p>
+        </div>
+      </div>
+    </main>
+    <script>
+      pintar_negro = function (elemento) {
+        console.log(elemento);
+        if(elemento == "azul_div"){
+            azul_div.style.backgroundColor = "black";
+        }else if(elemento == "rojo_div"){
+            rojo_div.style.backgroundColor = "black";
+        }else if(elemento == "verde_div"){
+            verde_div.style.backgroundColor = "black";
+        }else if(elemento == "amarillo_div"){
+            amarillo_div.style.backgroundColor = "black";
+        }else{
+            console.log("error en la transferencia de parametro")
+        }
+        
+      };
+
+      azul_div = document.querySelector(".azul");
+      rojo_div = document.querySelector(".rojo");
+      verde_div = document.querySelector(".verde");
+      amarillo_div = document.querySelector(".amarillo");
+
+      azul_div.addEventListener("click", function () {
+        pintar_negro("azul_div");
+      });
+      rojo_div.addEventListener("click", function () {
+        pintar_negro("rojo_div");
+      });
+      verde_div.addEventListener("click", function () {
+        pintar_negro("verde_div");
+      });
+      amarillo_div.addEventListener("click", function () {
+        pintar_negro("amarillo_div");
+      });
+    </script>
+  </body>
+</html>
